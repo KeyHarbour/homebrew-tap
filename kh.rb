@@ -5,21 +5,21 @@
 class Kh < Formula
   desc "Official CLI for KeyHarbour — self-hosted Terraform state backend"
   homepage "https://keyharbour.ca"
-  version "0.8.6"
+  version "0.8.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/KeyHarbour/cli/releases/download/v0.8.6/kh_0.8.6_darwin_amd64.tar.gz"
-      sha256 "589c5a333cdbfcff4b6626c025a6be04060cf9b045b1d67cfd932efb35a619ac"
+      url "https://github.com/KeyHarbour/cli/releases/download/v0.8.7/kh_0.8.7_darwin_amd64.tar.gz"
+      sha256 "defc4cf0090f3d567e6764bb147d2d12342fe071b5c5ba98beb5fef5e00dcabb"
 
       define_method(:install) do
         bin.install "kh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/KeyHarbour/cli/releases/download/v0.8.6/kh_0.8.6_darwin_arm64.tar.gz"
-      sha256 "639670bfba010a5edde1da082932a73bcedf3c224896720bc6adc9305cfc680b"
+      url "https://github.com/KeyHarbour/cli/releases/download/v0.8.7/kh_0.8.7_darwin_arm64.tar.gz"
+      sha256 "0008001862bfbd3374983048de2ac33476377a2b1c352881c7eb7d544ff83849"
 
       define_method(:install) do
         bin.install "kh"
@@ -29,15 +29,15 @@ class Kh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/KeyHarbour/cli/releases/download/v0.8.6/kh_0.8.6_linux_amd64.tar.gz"
-      sha256 "1d70c0e929d8e55a1919ef6e6f898421439cb1610340b04f259ef944ce20cf1f"
+      url "https://github.com/KeyHarbour/cli/releases/download/v0.8.7/kh_0.8.7_linux_amd64.tar.gz"
+      sha256 "e9c36f963aea54a0f76a7e31c08f43a14b49f6338986806f07a0a5ecb4e2d1de"
       define_method(:install) do
         bin.install "kh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/KeyHarbour/cli/releases/download/v0.8.6/kh_0.8.6_linux_arm64.tar.gz"
-      sha256 "9bdf5225ba400641e9eb171d5126893af62005f99356fd69243e81ab0c9b69b2"
+      url "https://github.com/KeyHarbour/cli/releases/download/v0.8.7/kh_0.8.7_linux_arm64.tar.gz"
+      sha256 "698a8fb2784a167819f83508f6b839adb8946497c87f36e3da4b409caef1afff"
       define_method(:install) do
         bin.install "kh"
       end
