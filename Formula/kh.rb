@@ -5,21 +5,21 @@
 class Kh < Formula
   desc "Official CLI for KeyHarbour — self-hosted Terraform state backend"
   homepage "https://keyharbour.ca"
-  version "1.6.0"
+  version "1.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/KeyHarbour/kh/releases/download/v1.6.0/kh_1.6.0_darwin_amd64.tar.gz"
-      sha256 "a091fe2744e5e60b5525fd646cd2b8fb317e69c107c42416aabe7925545c23e6"
+      url "https://github.com/KeyHarbour/kh/releases/download/v1.7.0/kh_1.7.0_darwin_amd64.tar.gz"
+      sha256 "1fab14695a528a9d63b78476f9ea22d1690941f43269c662e6e912b37a523bea"
 
       define_method(:install) do
         bin.install "kh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/KeyHarbour/kh/releases/download/v1.6.0/kh_1.6.0_darwin_arm64.tar.gz"
-      sha256 "3bd0ba0d231dedc85ced3d78fe2ea58154ae11b5f20707c615c02ff6302907ee"
+      url "https://github.com/KeyHarbour/kh/releases/download/v1.7.0/kh_1.7.0_darwin_arm64.tar.gz"
+      sha256 "eeeed15817c7297f8e710ac73421790208243a983b2b00b1b829d63ba3924b35"
 
       define_method(:install) do
         bin.install "kh"
@@ -29,15 +29,15 @@ class Kh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/KeyHarbour/kh/releases/download/v1.6.0/kh_1.6.0_linux_amd64.tar.gz"
-      sha256 "7e6c2df567dd404a04bbfc949012dc4a363bb3fd6011f5320ee9bfb0ce59fd44"
+      url "https://github.com/KeyHarbour/kh/releases/download/v1.7.0/kh_1.7.0_linux_amd64.tar.gz"
+      sha256 "4e3d03e6e72cf3e122568e6458858366f7d7a513f23d24bc8003689f6e329f6b"
       define_method(:install) do
         bin.install "kh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/KeyHarbour/kh/releases/download/v1.6.0/kh_1.6.0_linux_arm64.tar.gz"
-      sha256 "5f4a6a00c6ace63670240d44067ae5433cd6bb59360d586073ab5d2713017d32"
+      url "https://github.com/KeyHarbour/kh/releases/download/v1.7.0/kh_1.7.0_linux_arm64.tar.gz"
+      sha256 "cb491de006a920eafc7257fd4af2f2957e824bf2b61c6682efd3e3c49b810d1e"
       define_method(:install) do
         bin.install "kh"
       end
